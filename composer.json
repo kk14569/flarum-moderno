@@ -1,0 +1,32 @@
+{
+    "name": "kk14569/flarum-moderno",
+    "description": "Just another modern Flarum theme.",
+    "type": "flarum-extension",
+    "version": "v1.0.0",
+    "license": "GPL-3.0",
+    "require": {
+        "flarum/core": "^1.8.0"
+    },
+    "authors": [
+        {
+            "name": "14569",
+            "email": "notessentials@163.com",
+            "role": "Developer"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/kk14569/flarum-moderno/issues",
+        "source": "https://github.com/kk14569/flarum-moderno"
+    },
+    "extra": {
+        "flarum-extension": {
+            "title": "Moderno",
+            "category": "theme",
+            "icon": {
+                "name": "fas fa-fill-drip",
+                "backgroundColor": "#1E3050",
+                "color": "#fff"
+            }
+        }
+    }
+}
