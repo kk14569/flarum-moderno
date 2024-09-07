@@ -42,6 +42,7 @@
         &>button,
         &>span {
             border-radius: 12px;
+            transition: 0.4s;
         }
     }
 }
@@ -185,4 +186,25 @@
 }
 .aaalert.aainfo .aainner {
     border-left: 4px solid #569ff7 !important;
+}
+ul.NotificationGroup-content {
+    &>li {
+        margin: 4px 8px;
+        &>a {
+            &.Notification {
+                border-radius: 12px;
+                transition: 0.4s;
+            }
+            &.unread .Notification-title:after {
+                content: '';
+                display: inline-block;
+                width: 1em;
+                height: 1em;
+                border-radius: 50%;
+                background-color: var(--primary-color);
+                transform: translateY(10%);
+                margin-left: 8px;
+            }
+        }
+    }
 }
