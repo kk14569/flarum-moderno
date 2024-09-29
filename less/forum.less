@@ -1,55 +1,26 @@
-@border-radius: 20px;
+@border-radius: 8px;
 .tooltip-arrow,
 .Hero-close {
     display: none;
 }
-@keyframes dropdown-show {
-    0% {
-        opacity: 0;
-        transform: translateY(-20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-@keyframes alert-show {
-    0% {
-        opacity: 0;
-        transform: translateX(-20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-.Alert {
-    animation: alert-show .2s forwards;
-}
 @media @phone {
     .Dropdown-menu {
-        margin: 10px !important;
-        border-radius: 16px !important;
-        padding: 8px !important;
+        margin: 8px !important;
+        border-radius: 8px !important;
+        padding: 4px !important;
     }
 }
 .Dropdown-menu {
-    border-radius: 16px;
+    border-radius: 12px;
     padding: 1px;
     &>li {
         margin: 4px;
         &>a,
         &>button,
         &>span {
-            border-radius: 12px;
+            border-radius: 8px;
             transition: 0.4s;
         }
-    }
-}
-@media @tablet-up {
-    .Dropdown-menu--right {
-        opacity: 0;
-        animation: dropdown-show .2s forwards;
     }
 }
 .Button {
@@ -59,6 +30,17 @@
 .Button.active,
 .open>.Button.Dropdown-toggle {
     box-shadow: unset;
+}
+.Modal, .Modal-content {
+    border-radius: 12px;
+}
+.backdrop {
+    background-color: ~"#0000004D";
+}
+@media @phone {
+    .dropdown-backdrop, .drawer-backdrop, .composer-backdrop {
+        background-color: ~"#0000004D";
+    }
 }
 .LoadingIndicator {
     animation: none;
@@ -70,11 +52,17 @@
     mask: var(--animation-image);
 }
 .AfruxWidgets-Widget-content {
-    border-radius: @border-radius !important;
+    border-radius: 8px !important;
     background: @control-bg;
 }
+.Composer {
+    border-radius: 12px 12px 0 0;
+}
+.ComposerBody-loading {
+    border-radius: 12px;
+}
 .Post {
-    border-radius: @border-radius;
+    border-radius: 12px;
     margin-left: 4px;
     margin-right: 4px;
     margin-top: 16px;
@@ -101,42 +89,42 @@
 @media (min-width:992px) {
     .TagTiles>li {
         width: 30% !important;
-        border-radius: @border-radius !important;
+        border-radius: 8px !important;
         margin: 15px;
     }
 }
 @media (max-width:991px) and (min-width:768px) {
     .TagTiles>li {
         width: 45% !important;
-        border-radius: @border-radius !important;
+        border-radius: 12px !important;
         margin: 15px;
     }
 }
 @media (max-width:767px) {
     .TagTiles>li {
-        border-radius: @border-radius !important;
+        border-radius: 12px !important;
         margin: 15px;
     }
 }
 .DiscussionListItem {
     margin: 0 0 8px;
-    border-radius: @border-radius;
+    border-radius: 12px;
     background: @control-bg;
     @media @phone {
         margin: 8px !important;
     }
     &-controls .Dropdown-toggle {
-        border-radius: @border-radius;
+        border-radius: 12px;
     }
 }
 .DiscussionListItem-content {
     box-shadow: unset !important;
-    border-radius: @border-radius !important;
+    border-radius: 12px !important;
 }
 .Hero {
     margin: 15px auto 0;
     max-width: @screen-desktop-hd;
-    border-radius: @border-radius;
+    border-radius: 12px;
     @media @desktop {
         max-width: @screen-desktop;
     }
@@ -149,7 +137,7 @@
     }
 }
 .darkenBackground {
-    border-radius: @border-radius;
+    border-radius: 12px;
 }
 .Post-body pre {
     font-size: 12px;
@@ -209,5 +197,5 @@ ul.NotificationGroup-content {
     }
 }
 .ConversationsList .chat .chat-message {
-    border-radius: 0 0 @border-radius 0;
+    border-radius: 0 0 @border-radius 0 !important;
 }
