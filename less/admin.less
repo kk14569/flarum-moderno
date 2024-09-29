@@ -1,54 +1,26 @@
-@border-radius: 20px;
+@border-radius: 8px;
 .tooltip-arrow,
 .Hero-close {
     display: none;
 }
-@keyframes dropdown-show {
-    0% {
-        opacity: 0;
-        transform: translateY(-20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-@keyframes alert-show {
-    0% {
-        opacity: 0;
-        transform: translateX(-20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-.Alert {
-    animation: alert-show .2s forwards;
-}
 @media @phone {
     .Dropdown-menu {
-        margin: 10px !important;
-        border-radius: 16px !important;
-        padding: 8px !important;
+        margin: 8px !important;
+        border-radius: 8px !important;
+        padding: 4px !important;
     }
 }
 .Dropdown-menu {
-    border-radius: 16px;
+    border-radius: 12px;
     padding: 1px;
     &>li {
         margin: 4px;
         &>a,
         &>button,
         &>span {
-            border-radius: 12px;
+            border-radius: 8px;
+            transition: 0.4s;
         }
-    }
-}
-@media @tablet-up {
-    .Dropdown-menu--right {
-        opacity: 0;
-        animation: dropdown-show .2s forwards;
     }
 }
 .Button {
@@ -58,6 +30,17 @@
 .Button.active,
 .open>.Button.Dropdown-toggle {
     box-shadow: unset;
+}
+.Modal, .Modal-content {
+    border-radius: 12px;
+}
+.backdrop {
+    background-color: ~"#0000004D";
+}
+@media @phone {
+    .dropdown-backdrop, .drawer-backdrop, .composer-backdrop {
+        background-color: ~"#0000004D";
+    }
 }
 .LoadingIndicator {
     animation: none;
